@@ -7,6 +7,7 @@ The primary goal of this file is to demonstrate a simple unittest implementation
 @author: rk
 """
 import math
+import cmath
 
 
 import unittest
@@ -98,11 +99,12 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(-3,4,5),'InvalidInput', "Only non zero and non negative inputs should be allowed")
 #21
     def testTriangle18(self): 
-        self.assertEqual(classifyTriangle(5*math.sqrt(-1),3,4),'InvalidInput', "Only real numbers allowed")
+        self.assertEqual(classifyTriangle(complex(0,5),3,4),'InvalidInput', "Only real numbers allowed")
   #22      
     def testTriangle19(self): 
-        self.assertEqual(classifyTriangle(math.pi,1,1),'Isoceles', "Should be a Isoceles taingle")
+        self.assertEqual(classifyTriangle(math.pi,1,1),'NotATriangle', "Should be a Isoceles taingle")
         #Not specified in requiremens if irrational numbers are allowed or not
+        # while doing testing, I found I was mentioning wrong expected value.
 
 
 #23
@@ -114,12 +116,6 @@ class TestTriangles(unittest.TestCase):
         
    # def testEquilateralTriangles(self): 
       #  self.assertEqual(classifyTriangle("5","4","3"),'InvalidInput')
-
-   
-
-
-
-
 
 
 if __name__ == '__main__':
