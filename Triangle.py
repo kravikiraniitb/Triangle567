@@ -25,7 +25,7 @@ def classifyTriangle(a,b,c):
         
         
         elif not ((isinstance(a,int) or isinstance(a,float)) and (isinstance(b,int) or isinstance(b,float)) and (isinstance(c,int) or isinstance(c,float))):
-            return 'InvalidInput';
+            return 'InvalidInput'
         
         
         elif (a >= (b + c)) or (b >= (a + c)) or (c >= (a + b)):
