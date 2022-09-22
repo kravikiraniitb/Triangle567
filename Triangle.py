@@ -65,6 +65,3 @@ def classifyTriangle(a,b,c):
 
     except TypeError:
         return "InvalidInput"
-
-    else:
-        return "InvalidInput"

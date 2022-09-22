@@ -18,7 +18,7 @@ from Triangle import classifyTriangle
 # https://docs.python.org/3/library/unittest.html has a nice description of the framework
 
 class TestTriangles(unittest.TestCase):
-    # define multiple sets of tests as functions with names that begin
+    
 #1
     def testRightTriangleA(self): 
         self.assertEqual(classifyTriangle(3,4,5),'Right','3,4,5 is a Right triangle')
@@ -41,12 +41,12 @@ class TestTriangles(unittest.TestCase):
     def testTriangle4(self): 
         self.assertEqual(classifyTriangle(3,4,0),'InvalidInput', "Triangle can't have zero length")
 
-# , "Only non negative inputs valid"
+
 #8
     def testTriangle5(self): 
         self.assertEqual(classifyTriangle("5","3","4"),'InvalidInput', "String data type not allowed")
 
-        # Not mentioned in requirements if string data type allowed or not. 
+       
   #9      
     def testTriangle6(self): 
         self.assertEqual(classifyTriangle("1",1,1),'InvalidInput', "String data type not allowed")
@@ -57,7 +57,7 @@ class TestTriangles(unittest.TestCase):
     def testTriangle8(self): 
         self.assertEqual(classifyTriangle(5,3,"4"),'InvalidInput', "String data type not allowed")
 
-        #Error thrown when a string is passed as an input
+       
 
 
   #12      
@@ -88,12 +88,6 @@ class TestTriangles(unittest.TestCase):
     def testTriangle16(self): 
         self.assertEqual(classifyTriangle(3,3,4),'Isoceles', "3,3,4 is a Isoceles triangle")
         
-    #def testEquilateralTriangles(self): 
-      #  self.assertEqual(classifyTriangle(1,1,1),'Equilateral')
-
-
-
-##########
 #20
     def testTriangle17(self): 
         self.assertEqual(classifyTriangle(-3,4,5),'InvalidInput', "Only non zero and non negative inputs should be allowed")
@@ -103,8 +97,7 @@ class TestTriangles(unittest.TestCase):
   #22      
     def testTriangle19(self): 
         self.assertEqual(classifyTriangle(math.pi,1,1),'NotATriangle', "Should be a Isoceles taingle")
-        #Not specified in requiremens if irrational numbers are allowed or not
-        # while doing testing, I found I was mentioning wrong expected value.
+       
 
 
 #23
@@ -114,9 +107,7 @@ class TestTriangles(unittest.TestCase):
     def testTriangle21(self): 
         self.assertEqual(classifyTriangle(-5,0,-4),'InvalidInput', "Only non zero and non negative inputs should be allowed")
         
-   # def testEquilateralTriangles(self): 
-      #  self.assertEqual(classifyTriangle("5","4","3"),'InvalidInput')
-
+  
 
 if __name__ == '__main__':
     print('Running unit tests')
