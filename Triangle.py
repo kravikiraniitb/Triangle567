@@ -5,8 +5,7 @@ Updated on Sep 21, 2022
 
 The primary goal of this file is to demonstrate a simple python program to classify triangles
 
-@author: jrr
-@author: rk
+
 @ravikiran
 """
 import math
