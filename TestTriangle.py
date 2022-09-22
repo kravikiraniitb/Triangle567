@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Updated Jan 21, 2018
+Updated on Sep 21, 2022
 The primary goal of this file is to demonstrate a simple unittest implementation
 
-@author: jrr
-@author: rk
+@ravikiran
 """
 import math
 import cmath
@@ -14,8 +13,6 @@ import unittest
 
 from Triangle import classifyTriangle
 
-# This code implements the unit test functionality
-# https://docs.python.org/3/library/unittest.html has a nice description of the framework
 
 class TestTriangles(unittest.TestCase):
     
@@ -41,12 +38,10 @@ class TestTriangles(unittest.TestCase):
     def testTriangle4(self): 
         self.assertEqual(classifyTriangle(3,4,0),'InvalidInput', "Triangle can't have zero length")
 
-
 #8
     def testTriangle5(self): 
         self.assertEqual(classifyTriangle("5","3","4"),'InvalidInput', "String data type not allowed")
 
-       
   #9      
     def testTriangle6(self): 
         self.assertEqual(classifyTriangle("1",1,1),'InvalidInput', "String data type not allowed")
@@ -56,9 +51,6 @@ class TestTriangles(unittest.TestCase):
 #11
     def testTriangle8(self): 
         self.assertEqual(classifyTriangle(5,3,"4"),'InvalidInput', "String data type not allowed")
-
-       
-
 
   #12      
     def testTriangle9(self): 
@@ -98,8 +90,6 @@ class TestTriangles(unittest.TestCase):
     def testTriangle19(self): 
         self.assertEqual(classifyTriangle(math.pi,1,1),'NotATriangle', "Should be a Isoceles taingle")
        
-
-
 #23
     def testTriangle20(self): 
         self.assertEqual(classifyTriangle(math.sqrt(2),math.sqrt(3),math.sqrt(5)),'Right', "Should be a Right taingle")
